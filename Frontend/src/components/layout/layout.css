@@ -1,0 +1,43 @@
+.main-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-area {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  /* Стили для навигации */
+  .sidebar a {
+    color: #ecf0f1;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .sidebar a.active {
+    font-weight: bold;
+    color: #3498db;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .main-layout {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+    }
+  }
